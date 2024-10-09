@@ -9,6 +9,9 @@
 */
 {
   "sections": {
+    "image-with-slides": {
+      "type": "image-with-slides"
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -77,6 +80,7 @@
     }
   },
   "order": [
+    "image-with-slides",
     "image-with-text",
     "featured_collection"
   ]

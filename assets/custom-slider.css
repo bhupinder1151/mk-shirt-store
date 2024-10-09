@@ -1,0 +1,26 @@
+._my-slider-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+._my-slider-slides {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+._my-slider-item{
+    width: 100%; 
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+._my-slider-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
