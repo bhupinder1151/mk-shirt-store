@@ -12,6 +12,12 @@
     "image-with-slides": {
       "type": "image-with-slides",
       "settings": {
+        "slide-image-1": "shopify://shop_images/womens-fashion-on-hangers.jpg",
+        "slide-text-1": "Best Casual Shirt Store",
+        "slide-image-2": "shopify://shop_images/clothes-on-a-rack-in-a-clothing-store.jpg",
+        "slide-text-2": "Best Sweat Shirt Store",
+        "slide-image-3": "shopify://shop_images/white-collar-shirts-on-rack-in-sun.jpg",
+        "slide-text-3": "Best Formal Shirt Store"
       }
     },
     "image-with-text": {
