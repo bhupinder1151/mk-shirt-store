@@ -19,14 +19,24 @@
         <img src="{{ section.settings.slide-image-1 | image_url }}" width="100" height="100" alt="Slider Image">
       {% else %}
         <img src="{{ "shirt-store-1.webp" | asset_url }}" width="100" height="100" alt="Slider Image">
-      {% endif %}   
+      {% endif %} 
+      <div class="_my-slide-text">
+        <h2>          
+          {{ section.settings.slide-text-1 }}
+        </h2>
+      </div>
     </div>
     <div class="_my-slider-item">   
       {% if section.settings.slide-image-2 %}
         <img src="{{ section.settings.slide-image-2 | image_url }}" width="100" height="100" alt="Slider Image">
       {% else %}        
       <img src="{{ "shirt-store-2.webp" | asset_url }}" width="100" height="100" alt="Slider Image">
-      {% endif %}   
+      {% endif %}
+      <div class="_my-slide-text">
+        <h2>
+          {{ section.settings.slide-text-2 }}
+        </h2>
+      </div>
     </div>
     <div class="_my-slider-item">   
       {% if section.settings.slide-image-3 %}
@@ -34,6 +44,11 @@
       {% else %}        
       <img src="{{ "shirt-store-3.webp" | asset_url }}" width="100" height="100" alt="Slider Image">
       {% endif %}   
+      <div class="_my-slide-text">
+        <h2>
+          {{ section.settings.slide-text-3 }}
+        </h2>
+      </div>
     </div>
   </div>
 </div>
@@ -63,15 +78,33 @@
       "label": "Slide Image 1"
       },
       {
+      "type": "text",
+      "id": "slide-text-1",
+      "label": "Slide 1 Text",
+      "default": "Best Shirt Store"
+      },
+      {
       "type": "image_picker",
       "id": "slide-image-2",
       "label": "Slide Image 2"
       },
       {
+        "type": "text",
+        "id": "slide-text-2",
+        "label": "Slide 2 Text",
+        "default": "Best Shirt Store"
+        },
+      {
       "type": "image_picker",
       "id": "slide-image-3",
       "label": "Slide Image 3"
       },
+      {
+        "type": "text",
+        "id": "slide-text-3",
+        "label": "Slide 3 Text",
+        "default": "Best Shirt Store"
+        },
     ],
   }
 {% endschema %}
