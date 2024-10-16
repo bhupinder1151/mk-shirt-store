@@ -11,8 +11,15 @@ function loadingState(status, button) {
 }
 
 function openCartDrawer() {
-  document.getElementsByTagName("cart-drawer")[0].classList.add("active");
-  document.getElementsByTagName("body")[0].classList.add("overflow-hidden");
+  if (window.location.href.includes('opendrawer=true')) {
+    window.location.reload();
+  } else{
+    if (window.location.href.includes('?')) {
+      window.location.href = window.location.href +'&opendrawer=true';
+    }else{
+      window.location.href = window.location.href +'?&opendrawer=true';
+    }
+  }
 }
 
 async function clearCart() {
@@ -76,6 +83,24 @@ comboOneButton.addEventListener("click", async () => {
 
 let comboTwoButton = document.getElementById("_xl-bsc-btn-2");
 
-comboTwoButton.addEventListener("click", () => {
-  alert("Combo 2");
+comboTwoButton.addEventListener("click", async () => {
+  let formData = {
+    items: [
+      {
+        id: 45667138076864,
+        quantity: 1,
+      },
+      {
+        id: 45641582510272,
+        quantity: 1,
+      },
+    ],
+  };
+
+  loadingState(true, comboTwoButton);
+
+  await clearCart();
+  await addToCart(formData);
+  openCartDrawer();
+  loadingState(false, comboTwoButton);
 });
