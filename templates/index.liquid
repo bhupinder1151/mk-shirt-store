@@ -39,13 +39,15 @@
           </div>
         </div>
         <div class="_xl-bsc-item">
-          <img src="{{ "combo-2.jpg" | asset_url }}" width="100" height="300" alt="Combo 2">
+          <img src="{{ "combo-2.jpeg" | asset_url }}" width="100" height="300" alt="Combo 2">
           <div class="_xl-bsc-text">
             <div class="_xl-bsc-label">
               Best Casual Shirt Combo
             </div>
             <button id="_xl-bsc-btn-2" class="_xl-button _xl-button-primary _xl-bsc-btn">
-              Order Now
+              <span class="_xl-btn-loading">
+              </span>
+              <span class="_xl-btn-text">Order Now</span>
             </button>
           </div>
         </div>
@@ -125,6 +127,15 @@
 </div>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const opendrawer = urlParams.get("opendrawer");
+    if (opendrawer == "true") {
+      document.getElementsByTagName("cart-drawer")[0].classList.add("active");
+      document.getElementsByTagName("body")[0].classList.add("overflow-hidden");
+    }
+  });
+
   let showAllProductButton = document.getElementById('_xl-showAllProduct');
 
   showAllProductButton.addEventListener('click', () => {
