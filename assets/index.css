@@ -1,0 +1,233 @@
+.shopify-section-group-header-group,.shopify-section-group-footer-group{
+    display: none !important;
+}
+
+body {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+._xl-container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+._xl-flex{
+    display: flex;
+}
+
+
+
+._xl-image-banner{
+    background: url('shirt-store-3.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: fill 0
+    linear-gradient(90deg, #000000c0 40.37%, rgba(0, 0, 0, 0) 96.46%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+._xl-ib-wrapper{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+._xl-hero-wrapper{
+    width: 50%;    
+}
+._xl-hero-wrapper h1{
+    color: white;
+    font-size: 5rem;
+}
+
+._xl-hero-wrapper p{
+    color: #fff;
+    font-size: 2rem;
+}
+
+._xl-ib-btn-wrapper{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._xl-button{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+._xl-button:hover,._xl-button:focus{
+    opacity: 0.9;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+._xl-button-primary{
+    background-color: #074e8c;
+    color: white;
+}
+
+._xl-button-primary:hover,._xl-button-primary:focus{
+    opacity: 0.8;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 1);
+}
+
+._xl-btn-disable{
+    opacity: 0.5 !important;
+    cursor: not-allowed;
+}
+
+._xl-btn-loading{
+    display: none;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    animation: loading infinite linear 4s;
+}
+
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+
+._xl-feature{
+    margin: 84px 0;
+}
+
+._xl-f-wrapper{
+    display: flex;        
+}
+
+._xl-f-text-wrapper{
+    width: 70%;
+}
+._xl-f-text-wrapper h2{
+    font-size: 2.5rem;    
+}
+
+._xl-f-list{
+    padding: 0;
+    padding-right: 30px;
+}
+._xl-f-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+._xl-f-item img{
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+._xl-f-img-wrapper{
+    flex: 1;
+}
+
+._xl-f-img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+._xl-trust{
+    padding: 84px 0;
+    background-color: rgb(177, 201, 208);
+}
+
+._xl-t-list{
+    display: flex;    
+}
+
+._xl-t-text-wrapper{
+    width: 60%;
+    padding-right: 20px;
+}
+._xl-t-text-wrapper h2{
+    color: darkblue;
+    font-size: 3.2rem;
+}
+._xl-t-text-wrapper p{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+._xl-t-img-wrapper{
+    width: 40%;
+}
+._xl-t-img-wrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+._xl-best-selling-combo{
+    padding: 84px 0;
+    margin-bottom: 70px;
+}
+
+._xl-bsc-flex{
+    display: flex;
+    gap: 30px;
+}
+
+._xl-bsc-item{
+    width: calc(100% / 4);
+    border-radius: 10px;  
+    overflow: hidden;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+._xl-bsc-item img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+._xl-bsc-text{
+    padding: 0px 15px 20px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+._xl-bsc-label{
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+._xl-bsc-btn{
+    margin-top: auto;
+}
