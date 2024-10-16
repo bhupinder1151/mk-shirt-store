@@ -1,0 +1,135 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+{{ 'index.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'xl-index.js' | asset_url }}" defer></script>
+
+<div id="_xl-main">
+  <div class="_xl-image-banner">
+    <div class="_xl-container _xl-ib-wrapper">
+      <div class="_xl-hero-wrapper">
+        <h1>
+          {{ shop.name }}
+        </h1>
+        <p>
+          {{ shop.description }}
+        </p>
+      </div>
+      <div class="_xl-ib-btn-wrapper">
+        <button id="_xl-showAllProduct" class="_xl-button">Show All Products</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="_xl-best-selling-combo">
+    <div class="_xl-container">
+      <h2>Best Selling Combo</h2>
+      <div class="_xl-bsc-flex">
+        <div class="_xl-bsc-item">
+          <img src="{{ "combo-1.jpeg" | asset_url }}" width="100" height="300" alt="Combo 1">
+          <div class="_xl-bsc-text">
+            <div class="_xl-bsc-label">
+              Best Formal Shirt Pant Combo
+            </div>
+            <button id="_xl-bsc-btn-1" class="_xl-button _xl-button-primary _xl-bsc-btn">
+              <span class="_xl-btn-loading">
+              </span>
+              <span class="_xl-btn-text">Order Now</span>
+            </button>
+          </div>
+        </div>
+        <div class="_xl-bsc-item">
+          <img src="{{ "combo-2.jpg" | asset_url }}" width="100" height="300" alt="Combo 2">
+          <div class="_xl-bsc-text">
+            <div class="_xl-bsc-label">
+              Best Casual Shirt Combo
+            </div>
+            <button id="_xl-bsc-btn-2" class="_xl-button _xl-button-primary _xl-bsc-btn">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="_xl-feature">
+    <div class="_xl-container">
+      <div class="_xl-f-wrapper">
+        <div class="_xl-f-text-wrapper">
+          <h2>{{ shop.name }}</h2>
+          <ul class="_xl-f-list">
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">Offering a diverse range of shirts, from casual tees to formal dress shirts.</div>
+            </li>
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">Personalize your shirt with unique designs, colors, and sizes.</div>
+            </li>
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">
+                Committed to sustainability with shirts made from organic and recycled materials.
+              </div>
+            </li>
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">
+                Stay ahead of the fashion curve with the latest shirt trends and seasonal collections.
+              </div>
+            </li>
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">Competitive pricing ensures quality shirts for every budget.</div>
+            </li>
+            <li class="_xl-f-item">
+              <img src="{{ 'check-mark.png' | asset_url }}" width="30" height="30" alt="check-mark">
+              <div class="_xl-f-text">Friendly staff ready to assist with styling advice and fit recommendations.</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="_xl-f-img-wrapper">
+          <img src="{{ 'store-feature.jpg' | asset_url }}" width="100" height="100" alt="Shirt Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="_xl-trust">
+    <div class="_xl-container">
+      <div class="_xl-t-list">
+
+          <div class="_xl-t-text-wrapper">
+            <h2>Authenticity You Can Trust</h2>
+            <p>
+              Our shirt store offers a diverse range of high-quality shirts made from premium, eco-friendly fabrics.
+              Enjoy customizable options to create your perfect fit and style. With competitive pricing and dedicated
+              customer service, we ensure a delightful shopping experience.
+            </p>
+          </div>
+        <div class="_xl-t-img-wrapper">
+          <img
+            src="{{ 'store-certificate.webp' | asset_url }}"
+            class="_xl-t-img"
+            width="300"
+            height="200"
+            alt="Store Certificate"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let showAllProductButton = document.getElementById('_xl-showAllProduct');
+
+  showAllProductButton.addEventListener('click', () => {
+    console.log('Show all products');
+    window.location.href = '{{ routes.all_products_collection_url }}';
+  });
+
+</script>
